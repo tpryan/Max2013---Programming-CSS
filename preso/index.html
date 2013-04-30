@@ -152,7 +152,9 @@
 
 				</section>
 				<section>
+					
 					<section>
+						<div class="conte<section>
 						<div class="content">
 							<h1>CSS is not a programming language.</h1>
 							<p class="fragment">Missing:</p>
@@ -164,9 +166,7 @@
 							<br /><br /><br /><br />
 							<h1 class="fragment">Result &mdash; <em>Unproductive</em></h1>
 						</div>	
-					</section>
-					<section>
-						<div class="content">
+					</section>nt">
 							<h1>Optimized CSS is not good for humans.</h1>
 							<p class="fragment">Challenges:</p>
 							<ul>
@@ -177,11 +177,7 @@
 							<h1 class="fragment">Result &mdash; <em>Bad CSS for someone</em></h1>
 						</div>	
 					</section>
-					<section class="question">
-						<div class="content">
-							<h1>Preprocessors</h1>
-						</div>	
-					</section>
+					
 					<section>
 						<div class="content">
 							<h1>Optimized CSS is not good for humans.</h1>
@@ -196,8 +192,257 @@
 					</section>
 				</section>	
 
+				<style>
+					.file{
+						width: 150px;
+					}
+
+					.package{
+						width: 150px;
+					}
+
+					.reveal .arrow{
+						font-size: 140px;
+						position: relative;
+						top: -70px;	
+						margin: 0 50px;
+						font-weight: bold;
+					}
+
+				</style>
+
+				<section>
+					<section class="question">
+						<div class="content">
+							<h1>Preprocessors</h1>
+						</div>	
+					</section>
+					<section>
+						<img src="img/notcss.svg" class="transparent file fragment" />
+						<span class="arrow fragment">&rarr;</span>
+						<img src="img/package.svg" class="transparent package fragment" />
+						<span class="arrow fragment">&rarr;</span>
+						<img src="img/css.svg" class="transparent file fragment" />
+					</section>	
 
 
+					<section>
+						<div class="content">
+							<h1>Most Popular Preprocessors</h1>
+							<ul>
+								<li class="fragment"><a href="http://learnboost.github.io/stylus/">Stylus</a></li>
+								<li class="fragment"><a href="http://lesscss.org/">Less</a></li>
+								<li class="fragment"><a href="http://sass-lang.com/">SASS</a></li>
+							</ul>
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>What's the difference?</h1>
+						</div>	
+					</section>
+					<section>
+						<div class="content">
+							<h1>The Difference?</h1>
+							<ul>
+								<li class="fragment">Syntax</li>
+								<li class="fragment">Underlying tech</li>
+							</ul>
+						</div>	
+					</section>
+					<style>
+					.reveal .code-half{
+						width: 45%;
+						margin:0 5px 0 5px;
+						float: left;
+						position: static;
+					}
+
+					</style>
+					<section>
+						<figure  class="code-half">
+						<figcaption>Stylus</figcaption>	
+						<pre><code contenteditable>
+alertcolor: #FF0000     
+.alert              
+  color: alertcolor
+  .title 
+  	font-weight: bold
+  
+  .description
+  	font-variant: italic
+     
+
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+.alert {             
+  color: #FF0000; 
+}
+.alert .title{
+	font-weight: bold;
+}
+.alert .description{
+	font-variant: italic;
+}
+		
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+					<section>
+						<figure  class="code-half">
+						<figcaption>LESS</figcaption>	
+						<pre><code contenteditable>
+@alertcolor: #FF0000     
+.alert{              
+  color: @alertcolor;
+  .title {
+  	font-weight: bold;
+  }
+  .description{
+  	font-variant: italic;
+  }   
+}
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+.alert {             
+  color: #FF0000; 
+}
+.alert .title{
+	font-weight: bold;
+}
+.alert .description{
+	font-variant: italic;
+}
+		
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+					<section>
+						<figure  class="code-half">
+						<figcaption>SASS (SASS)</figcaption>	
+						<pre><code contenteditable>
+$alertcolor: #FF0000     
+.alert              
+  color: $alertcolor
+  .title
+  	font-weight: bold
+  
+  .description
+  	font-variant: italic
+   
+
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+.alert {             
+  color: #FF0000; 
+}
+.alert .title{
+	font-weight: bold;
+}
+.alert .description{
+	font-variant: italic;
+}
+		
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+					<section>
+						<figure  class="code-half">
+						<figcaption>SASS (SCSS)</figcaption>	
+						<pre><code contenteditable>
+$alertcolor: #FF0000;     
+.alert {             
+  color: $alertcolor;
+  .title{
+  	font-weight: bold;
+  }
+  .description{
+  	font-variant: italic;
+  } 
+}
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+.alert {             
+  color: #FF0000; 
+}
+.alert .title{
+	font-weight: bold;
+}
+.alert .description{
+	font-variant: italic;
+}
+		
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+					<section>	
+						<div class="content">
+							<img src="img/picard.png" />
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Don't worry about that now.</h1>
+						</div>	
+					</section>
+					<section>
+						<div class="content">
+							<h1>Preprocessors all do:</h1>
+							<ul>
+								<li class="fragment">Variables</li>
+								<li class="fragment">Nesting</li>
+								<li class="fragment">Functions ("Mixin")</li>
+								<li class="fragment">Concatenation</li>
+							</ul>
+							<br /><br /><br /><br />
+							<h1 class="fragment">Result &mdash; <em>Much more productive</em></h1>
+						</div>	
+					</section>
+
+
+
+					<section>
+						<div class="content">
+							<h1>Use The Google</h1>
+							<ul>
+								<li><a href="http://net.tutsplus.com/tutorials/html-css-techniques/sass-vs-less-vs-stylus-a-preprocessor-shootout/">Sass vs. LESS vs. Stylus: Preprocessor Shootout</a></li>
+								<li><a href="https://gist.github.com/paulmillr/2005644">Sass vs Stylus vs LESS</a></li>
+								<li><a href="https://coderwall.com/p/p7suww">Stylus is better than LESS and SASS</a></li>
+								<li><a href="http://www.scottlogic.co.uk/2013/03/less-vs-sass-vs-stylus/">Less vs Sass vs Stylus</a></li>
+								<li><a href="http://css-tricks.com/sass-vs-less/">Sass vs. LESS</a></li>
+							</ul>
+						</div>	
+					</section>
+
+				</section>
 
 
 

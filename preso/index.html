@@ -82,7 +82,7 @@
 							}
 							.reveal .donttable{
 								width: 	550px;
-								position: fixed;
+								position: absolute;
 								top: 25%;
 								right: 50px;
 								margin: 0 auto;
@@ -473,7 +473,7 @@ url("batman.jpg") !important;
 
 						</div>
 					</section>
-						<section>
+					<section>
 						<h1>Why?</h1>
 						<pre class="split-screen"><code contenteditable>
 &lt;div id="header"&gt;
@@ -534,8 +534,149 @@ url("batman.jpg") !important;
 					</section>	
 
 				</section>	
+				<section>
+					<section class="question">
+						<div class="content">
+							<h1>Avoid CSS Smells</h1>
+						</div>	
+					</section>
+					<section>
+						<h1>Avoid Magic Numbers</h1>
+						<pre class="split-screen"><code contenteditable>
+li:last-child{
+	position:relative;
+	top: 3px;
+}							
+						</code></pre>
+						<div class="split-screen fragment">
+							<ul>
+								<li>Brittle</li>
+								<li>Something else is broken</li>
+								<li>Might be environmental</li>
+							</ul>	
+						</div>	
+					</section>
+					<section>
+						<h1>Avoid Qualified Selectors</h1>
+						<pre class="split-screen"><code contenteditable>
+li.phone-number{
+	color:red;
+}
 
-					
+						</code></pre>
+						<div class="split-screen fragment">
+							<ul>
+								<li>Not resuable</li>
+								<li>More work for the browser</li>
+							</ul>	
+						</div>	
+					</section>
+					<section>
+						<h1>Avoid Undoing Your CSS</h1>
+						<pre class="split-screen"><code contenteditable>
+h2{
+text-shadow: 2px 2px 4px #CCC;
+}
+.post h2{
+text-shadow: none;
+}
+
+						</code></pre>
+						<div class="split-screen fragment">
+							<ul>
+								<li>You're applying too early</li>
+								<li>Less maintainable</li>
+							</ul>	
+						</div>	
+					</section>
+					<section>
+						<h1>Avoid Super-Broad Rules</h1>
+						<pre class="split-screen"><code contenteditable>
+body{
+text-shadow: 2px 2px 4px #CCC;
+}
+
+
+						</code></pre>
+						<div class="split-screen fragment">
+							<ul>
+								<li>You're applying too early</li>
+								<li>Less maintainable</li>
+							</ul>	
+						</div>	
+					</section>
+					<section>
+						<h1>Prefer Classes to ID's</h1>
+						<pre class="split-screen"><code contenteditable>
+.special-event-notice{
+text-shadow: 2px 2px 4px #CCC;
+}
+
+
+						</code></pre>
+						<div class="split-screen fragment">
+							<ul>
+								<li>Everyone is fighting at the same strength</li>
+								<li>More maintainable</li>
+							</ul>	
+						</div>	
+					</section>
+					<section>
+						<h1>Avoid !important to fix bad CSS</h1>
+						<pre class="split-screen"><code contenteditable>
+#header p{
+	color:red;
+}
+.panel p{
+	color:green !important; 
+}
+
+
+						</code></pre>
+						<div class="split-screen fragment">
+							<ul>
+								<li>More maintainable.</li>
+							</ul>	
+						</div>	
+					</section>
+					<section>
+						<h1>Prefer !important for things that are actually important</h1>
+						<pre class="split-screen"><code contenteditable>
+.error p{
+	color:red !important;
+}
+.panel p{
+	color:green; 
+}
+
+
+						</code></pre>
+						<div class="split-screen fragment">
+							<ul>
+								<li>What is actually used for</li>
+							</ul>	
+						</div>	
+					</section>
+					<section>
+						<h1>Prefer Specific Class Names</h1>
+						<pre class="split-screen"><code contenteditable>
+.card img{
+	border:1px solid #CCC;
+}
+.credit-card img{
+	border:1px solid #CCC;
+}
+
+
+						</code></pre>
+						<div class="split-screen fragment">
+							<ul>
+								<li>Unlikely to be accidently changed.</li>
+								<li>More maintainable.</li>
+							</ul>	
+						</div>	
+					</section>		
+				</section>
 
 
 				<style>
@@ -777,7 +918,7 @@ $alertcolor: #FF0000;
 
 					<section>
 						<div class="content">
-							<h1>Use The Google</h1>
+							<h1>References</h1>
 							<ul>
 								<li><a href="http://net.tutsplus.com/tutorials/html-css-techniques/sass-vs-less-vs-stylus-a-preprocessor-shootout/">Sass vs. LESS vs. Stylus: Preprocessor Shootout</a></li>
 								<li><a href="https://gist.github.com/paulmillr/2005644">Sass vs Stylus vs LESS</a></li>

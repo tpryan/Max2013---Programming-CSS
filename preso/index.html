@@ -154,7 +154,6 @@
 				<section>
 					
 					<section>
-						<div class="conte<section>
 						<div class="content">
 							<h1>CSS is not a programming language.</h1>
 							<p class="fragment">Missing:</p>
@@ -166,18 +165,8 @@
 							<br /><br /><br /><br />
 							<h1 class="fragment">Result &mdash; <em>Unproductive</em></h1>
 						</div>	
-					</section>nt">
-							<h1>Optimized CSS is not good for humans.</h1>
-							<p class="fragment">Challenges:</p>
-							<ul>
-								<li class="fragment">Long single style sheets</li>
-								<li class="fragment">Many, browser inefficient, style sheets</li>
-							</ul>
-							<br /><br /><br /><br />
-							<h1 class="fragment">Result &mdash; <em>Bad CSS for someone</em></h1>
-						</div>	
 					</section>
-					
+
 					<section>
 						<div class="content">
 							<h1>Optimized CSS is not good for humans.</h1>
@@ -191,6 +180,363 @@
 						</div>	
 					</section>
 				</section>	
+
+				<section>
+					<section class="question">
+						<div class="content">
+							<h1>CSS Best Practices</h1>
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>CSS Resets</h1>
+						</div>	
+					</section>
+					<section>
+						<div class="content">
+							<p><a href="../code/reset/" target="_new">Demo</a></p>
+						</div>	
+					</section>	
+					<section>
+						<img src="img/chrome.png" />	
+					</section>
+					<section>
+						<img src="img/safari.png" />	
+					</section>
+					<section>
+						<img src="img/compare.png" />	
+					</section>
+					<section>
+						<div class="content">
+							<h1>Browsers render things different</h1>
+							<p class="fragment">Fixes:</p>
+							<ul>
+								<li class="fragment">Browser specific hacks</li>
+								<li class="fragment">Deal with the differences.</li>
+								<li class="fragment">Reset</li>
+							</ul>
+						</div>	
+					</section>
+					<section>
+						<div class="content">
+							<h1>Resets</h1>
+							<ul>
+								<li class="fragment">Start all browsers at zero</li>
+								<li class="fragment">Force you to consider everything</li>
+							</ul>
+						</div>	
+					</section>
+
+
+					<section class="question">
+						<div class="content">
+							<h1>Organization</h1>
+						</div>	
+					</section>
+
+					<section>
+						<div class="content">
+							<h1>Two Schools</h1>
+							<ul>
+								<li class="fragment">Interfaces</li>
+								<li class="fragment">Design Aspect</li>
+							</ul>
+						</div>	
+					</section>
+					<section>
+						<div class="content">
+							<h1>Interface</h1>
+							<ul>
+								<li class="fragment">Header</li>
+								<li class="fragment">Nav</li>
+								<li class="fragment">Footer</li>
+								<li class="fragment">Content</li>
+								<li class="fragment">Sub Interface</li>
+							</ul>
+						</div>	
+					</section>
+					
+					<section>
+						<div class="content">
+							<h1>Design Aspects</h1>
+							<ul>
+								<li class="fragment">Fonts</li>
+								<li class="fragment">Color</li>
+								<li class="fragment">Background</li>
+								<li class="fragment">Layout</li>
+								<li class="fragment">Media Queries</li>
+							</ul>
+						</div>	
+					</section>
+					<section>
+						<div class="content">
+							<h1>Interfaces - Pros</h1>
+							<ul>
+								<li class="fragment">Slightly less verbose</li>
+								<li class="fragment">Easier to track down</li>
+								<li class="fragment">Easier to focus</li>
+								<li class="fragment">Preference?</li>
+							</ul>
+						</div>	
+					</section>
+					<section>
+						<div class="content">
+							<h1>Design Aspects</h1>
+							<ul>
+								<li class="fragment">Easier to repurpose</li>
+								<li class="fragment">Easier to rebrand</li>
+								<li class="fragment">Easier to make responsive</li>
+								<li class="fragment">Preference?</li>
+							</ul>
+						</div>	
+					</section>
+					
+					<section class="question">
+						<div class="content">
+							<h1>I prefer aspects.</h1>
+						</div>	
+					</section>
+
+				</section>
+				<section>
+					<section class="question">
+						<div class="content">
+							<h1>Class vs ID?</h1>
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Use ID's <br />in HTML &amp; JS</h1>
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>CSS Specificity</h1>
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Andy Clarke</h1>
+							<p><a href="http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html">CSS: Specificity Wars</a></p>
+						</div>	
+					</section>
+					<style>
+						.spec img{
+							width: 300px;
+						}
+					</style>
+					<section class="question">
+						<div class="content-with-bg">
+							<figure class="spec fragment">
+								<img src="img/troop.jpg" class="transparent"/>
+								<figcaption>Element</figcaption>
+							</figure>
+							<figure class="spec fragment">
+								<img src="img/darth.jpg" class="transparent"/>
+								<figcaption>.class</figcaption>
+							</figure>
+							<figure class="spec fragment">
+								<img src="img/palp.jpg" class="transparent"/>
+								<figcaption>#id</figcaption>
+							</figure>	
+						</div>	
+					</section>
+					<section>
+						<h1>Element</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div&gt;
+&lt;/div&gt;
+
+div{
+	background-image: 
+	url("img/troop.jpg");
+}
+
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .stormtrooper{
+								background-image: url("img/troop.jpg");
+							}
+							.reveal .character{
+								height: 400px;
+								background-size: 50%;
+							}
+						</style>
+						<div class="split-screen character stormtrooper fragment">
+
+						</div>
+					</section>
+					<section>
+						<h1>Class beats Element</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="darth"&gt;
+&lt;/div&gt;
+
+div{
+	background-image: 
+	url("img/troop.jpg");
+}
+
+.darth{
+	background-image: 
+	url("img/darth.jpg");
+}
+
+						</code></pre>
+
+						<style>
+						.reveal .darth{
+								background-image: url("img/darth.jpg");
+							}
+							.reveal .character{
+								height: 400px;
+								background-size: 50%;
+								background-repeat: no-repeat;
+								background-color: #FFF;
+							}
+						</style>
+						<div class="split-screen character darth fragment">
+
+						</div>
+					</section>
+					<section>
+						<h1>ID beats Class</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div id="palp" class="darth"&gt;
+&lt;/div&gt;
+div{
+	background-image: 
+	url("troop.jpg");
+}
+
+.darth{
+	background-image: 
+	url("darth.jpg");
+}
+
+#palp{
+	background-image: 
+	url("palp.jpg");
+}
+						</code></pre>
+
+						<style>
+						.reveal .palp{
+								background-image: url("img/palp.jpg");
+							}
+						</style>
+						<div class="split-screen character palp fragment">
+
+						</div>
+					</section>					
+					<section>
+						<h1>Inline beats ID</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div id="palp" class="darth"
+style="bg-image:url('dstar.jpg')"&gt;
+&lt;/div&gt;
+div...
+
+.darth...
+
+#palp...
+						</code></pre>
+
+						<div class="split-screen character palp fragment" style="background-image: url('img/dstar.jpg')">
+
+						</div>
+					</section>
+					<section>
+						<h1>!important</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div id="palp" 
+class="darth batman"
+style="bg-image:url('dstar.jpg')"&gt;
+&lt;/div&gt;
+
+.batman{
+background-image: 
+url("batman.jpg") !important;
+}
+						</code></pre>
+						<style>
+						.reveal .batman{
+								background-image: url("img/batman.jpg") !important;
+							}
+						</style>
+						<div class="split-screen character palp fragment batman" style="background-image: url('img/dstar.jpg')">
+
+						</div>
+					</section>
+						<section>
+						<h1>Why?</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div id="header"&gt;
+	&lt;div class="panel"&gt;
+		&lt;p&gt;Panel Text&lt;/p&gt;
+	&lt;/div&gt;	
+&lt;/div&gt;
+
+#header p{
+	color:red;
+}
+.panel p{
+	color:green; 
+}
+						</code></pre>
+						<style>
+							#header-example p{
+								color:red;
+							}
+							.panel-example p{
+								color:green; 
+							}
+						</style>
+						<div id="header-example" class="split-screen fragment">
+							<div class="panel-example">
+								<p>Panel Text</p>
+							</div>	
+						</div>	
+					</section>
+					<style>
+						.spec2 img{
+							width: 180px;
+						}
+					</style>
+					<section class="question">
+						<div class="content-with-bg">
+							<figure class="spec2 fragment">
+								<img src="img/troop.jpg" class="transparent"/>
+								<figcaption>Element</figcaption>
+							</figure>
+							<figure class="spec2 fragment">
+								<img src="img/darth.jpg" class="transparent"/>
+								<figcaption>.class</figcaption>
+							</figure>
+							<figure class="spec2 fragment">
+								<img src="img/palp.jpg" class="transparent"/>
+								<figcaption>#id</figcaption>
+							</figure>
+							<figure class="spec2 fragment">
+								<img src="img/dstar.jpg" class="transparent"/>
+								<figcaption>Inline Style</figcaption>
+							</figure>
+							<figure class="spec2 fragment">
+								<img src="img/batman.jpg" class="transparent"/>
+								<figcaption>!important</figcaption>
+							</figure>	
+						</div>	
+					</section>	
+
+				</section>	
+
+					
+
 
 				<style>
 					.file{

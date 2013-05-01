@@ -249,7 +249,14 @@ $headingTextTransform: none;
 		}
 	}
 
-
+	figure{
+		display: inline-block;
+	}
+	.split-screen{
+		width: 45%;
+		margin-right: 20px;
+		float: left;
+	}
 }
 
 .adobelogo{

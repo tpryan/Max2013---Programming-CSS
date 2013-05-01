@@ -239,6 +239,12 @@ body {
   .reveal dl dt {
     font-weight: bold;
     text-align: left; }
+.reveal figure {
+  display: inline-block; }
+.reveal .split-screen {
+  width: 45%;
+  margin-right: 20px;
+  float: left; }
 
 .adobelogo {
   right: 17%;

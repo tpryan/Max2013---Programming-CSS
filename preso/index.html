@@ -467,7 +467,7 @@ div...
 					</section>
 					<section>
 						<h1>!important</h1>
-						<pre class="split-screen"><code contenteditable>
+						<pre class="split-screen fragment"><code contenteditable>
 &lt;div id="palp" 
 class="darth batman"
 style="bg-image:url('dstar.jpg')"&gt;
@@ -810,6 +810,19 @@ text-shadow: 2px 2px 4px #CCC;
 						<img src="img/package.svg" class="transparent package fragment" />
 						<span class="arrow fragment">&rarr;</span>
 						<img src="img/css.svg" class="transparent file fragment" />
+					</section>
+					<section>
+						<div class="content">
+							<h1>Preprocessors all do:</h1>
+							<ul>
+								<li class="fragment">Variables</li>
+								<li class="fragment">Nesting</li>
+								<li class="fragment">Functions ("Mixin")</li>
+								<li class="fragment">Concatenation</li>
+							</ul>
+							<br /><br /><br /><br />
+							<h1 class="fragment">Result &mdash; <em>Much more productive</em></h1>
+						</div>	
 					</section>	
 
 
@@ -854,10 +867,10 @@ alertcolor: #FF0000
 .alert              
   color: alertcolor
   .title 
-  	font-weight: bold
+    font-weight: bold
   
   .description
-  	font-variant: italic
+    font-variant: italic
      
 
 							
@@ -870,10 +883,10 @@ alertcolor: #FF0000
   color: #FF0000; 
 }
 .alert .title{
-	font-weight: bold;
+  font-weight: bold;
 }
 .alert .description{
-	font-variant: italic;
+  font-variant: italic;
 }
 		
 
@@ -890,10 +903,10 @@ alertcolor: #FF0000
 .alert{              
   color: @alertcolor;
   .title {
-  	font-weight: bold;
+    font-weight: bold;
   }
   .description{
-  	font-variant: italic;
+    font-variant: italic;
   }   
 }
 							
@@ -906,10 +919,10 @@ alertcolor: #FF0000
   color: #FF0000; 
 }
 .alert .title{
-	font-weight: bold;
+  font-weight: bold;
 }
 .alert .description{
-	font-variant: italic;
+  font-variant: italic;
 }
 		
 
@@ -1058,19 +1071,7 @@ $alertcolor: #FF0000;
 							<h3>I have a strong feeling about another one of these!</h3>
 						</div>	
 					</section>
-					<section>
-						<div class="content">
-							<h1>Preprocessors all do:</h1>
-							<ul>
-								<li class="fragment">Variables</li>
-								<li class="fragment">Nesting</li>
-								<li class="fragment">Functions ("Mixin")</li>
-								<li class="fragment">Concatenation</li>
-							</ul>
-							<br /><br /><br /><br />
-							<h1 class="fragment">Result &mdash; <em>Much more productive</em></h1>
-						</div>	
-					</section>
+					
 					<section class="question">
 						<div class="content">
 							<h1>All examples are SCSS</h1>
@@ -1384,18 +1385,6 @@ $basesize: 20px;
 					</section>
 
 
-					<section>
-						<div class="content">
-							<h1>References</h1>
-							<ul>
-								<li><a href="http://net.tutsplus.com/tutorials/html-css-techniques/sass-vs-less-vs-stylus-a-preprocessor-shootout/">Sass vs. LESS vs. Stylus: Preprocessor Shootout</a></li>
-								<li><a href="https://gist.github.com/paulmillr/2005644">Sass vs Stylus vs LESS</a></li>
-								<li><a href="https://coderwall.com/p/p7suww">Stylus is better than LESS and SASS</a></li>
-								<li><a href="http://www.scottlogic.co.uk/2013/03/less-vs-sass-vs-stylus/">Less vs Sass vs Stylus</a></li>
-								<li><a href="http://css-tricks.com/sass-vs-less/">Sass vs. LESS</a></li>
-							</ul>
-						</div>	
-					</section>
 					<section class="question">
 						<div class="split-screen">
 							<img src="img/hipster.jpg" style="max-height: 600px;" />
@@ -1442,15 +1431,20 @@ $basesize: 20px;
 						</div>	
 					</section>
 
+
 					<section>
 						<h1>Questions?</h1>
 						<div class="content-with-bg">
-							<p>Preso availalble at:</p>
+							<p>Source, Presentation &amp; References:</p>
 							<ul>
-								<li><a href="http://terrenceryan.com/max2013/programmingcss/preso">http://terrenceryan.com/max2013/programmingcss/preso</a></li>
-								<li><a href="http://terrenceryan.com/max2013/programmingcss/preso">Adobe Max Site</a></li>
+								<li><a href="http://bit.ly/max-tr-2">http://bit.ly/max-tr-2</a></li>
 							</ul>
-							<br /><br /><br />
+							<br /><br />	
+							<p>Preso also availalble at:</p>
+							<ul>
+								<li><a href="http://max.adobe.com">Adobe Max Site</a></li>
+							</ul>
+							<br /><br />
 							<p>Contact Me?</p>
 							<ul>
 								<li><a href="http://terrenceryan.com">http://terrenceryan.com</a></li>
@@ -1459,6 +1453,7 @@ $basesize: 20px;
 							</ul>	
 						</div>					
 					</section>
+
 				</section>	
 			</div>
 

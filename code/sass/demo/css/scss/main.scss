@@ -14,7 +14,7 @@ $shadow_medium: rgb(83, 83, 83) 2px 2px 3px;
 
 html { 
 	font-size: 62.5%; 
-	font-family: noticia-text, serif;
+	font-family: $font_body;
 	background-color: #777;
 }
 body{

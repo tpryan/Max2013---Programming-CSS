@@ -679,24 +679,7 @@ text-shadow: 2px 2px 4px #CCC;
 				</section>
 
 
-				<style>
-					.file{
-						width: 150px;
-					}
-
-					.package{
-						width: 150px;
-					}
-
-					.reveal .arrow{
-						font-size: 140px;
-						position: relative;
-						top: -70px;	
-						margin: 0 50px;
-						font-weight: bold;
-					}
-
-				</style>
+				
 
 				<section>
 					<section class="question">
@@ -704,6 +687,24 @@ text-shadow: 2px 2px 4px #CCC;
 							<h1>Preprocessors</h1>
 						</div>	
 					</section>
+					<style>
+						.file{
+							width: 150px;
+						}
+
+						.package{
+							width: 150px;
+						}
+
+						.reveal .arrow{
+							font-size: 140px;
+							position: relative;
+							top: -70px;	
+							margin: 0 50px;
+							font-weight: bold;
+						}
+
+					</style>
 					<section>
 						<img src="img/notcss.svg" class="transparent file fragment" />
 						<span class="arrow fragment">&rarr;</span>
@@ -913,8 +914,311 @@ $alertcolor: #FF0000;
 							<h1 class="fragment">Result &mdash; <em>Much more productive</em></h1>
 						</div>	
 					</section>
+					<section class="question">
+						<div class="content">
+							<h1>All examples are SCSS</h1>
+						</div>	
+					</section>
+
+					<section>
+						<h1>Variables</h1>
+						<figure  class="code-half">
+						<figcaption>SCSS</figcaption>	
+						<pre><code contenteditable>
+$highlight: #C55C55;     
+.post .title{
+	color: $highlight;
+}
+.comment .author{
+	color: $highlight;
+}
+.archive .title{
+	color: $highlight;
+}
+     
+
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+.post .title{
+	color: #C55C55;
+}
+.comment .author{
+	color: #C55C55;
+}
+.archive .title{
+	color: #C55C55;
+}
+		
 
 
+
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+					<section>
+						<h1>Nesting</h1>
+						<figure  class="code-half">
+						<figcaption>SCSS</figcaption>	
+						<pre><code contenteditable>
+.post{
+  color: #333;
+  .title{
+    font-size: 20px;
+  }
+  .comment{
+    color:#666;
+    .title{
+      color: #F00;
+    }
+  }
+}
+     
+
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+.post {
+  color: #333;
+}
+.post .title {
+  font-size: 20px;
+}
+.post .comment {
+  color: #666;
+}
+.post .comment .title {
+  color: #F00;
+}
+		
+
+
+
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+					<section>
+						<h1>Mixin</h1>
+						<figure  class="code-half">
+						<figcaption>SCSS</figcaption>	
+						<pre><code contenteditable>
+@mixin transition($options) {
+-webkit-transition: $options;
+-moz-transition: $options;
+-o-transition: $options;
+transition: $options;
+}
+
+.alert{
+@include 
+transition(all 1s ease);
+}
+     
+
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+.alert {
+-webkit-transition:all 1s ease;
+-moz-transition:all 1s ease;
+-o-transition:all 1s ease;
+transition:all 1s ease;
+}
+		
+
+
+
+
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+					<section>
+						<h1>Inheritance</h1>
+						<figure  class="code-half">
+						<figcaption>SCSS</figcaption>	
+						<pre><code contenteditable>
+.person {
+  border: 1px solid green;
+}
+ 
+.customer {
+  @extend .person;
+  font-variant: italic;
+}
+
+.employee {
+  @extend .person;
+  font-variant: bold;
+}
+     
+
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+.person, .customer, .employee {
+  border: 1px solid green;
+}
+
+.customer {
+  font-variant: italic;
+}
+
+.employee {
+  font-variant: bold;
+}
+		
+
+
+
+
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+					<section>
+						<h1>Color Functions</h1>
+						<figure  class="code-half">
+						<figcaption>SCSS</figcaption>	
+						<pre><code contenteditable>
+$highlight: #C55C55;     
+
+a{color: $highlight;}
+
+a:hover{color: 
+lighten($highlight, 10%)
+}     
+
+
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+a {
+  color: #c55c55; 
+}
+
+a:hover {
+  color: #d2807b; 
+}
+		
+		
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+					<section>
+						<h1>Math</h1>
+						<figure  class="code-half">
+						<figcaption>SCSS</figcaption>	
+						<pre><code contenteditable>
+$basesize: 20px;
+
+.post .title{
+  font-size: $basesize + 4px;
+}   
+
+
+							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>CSS</figcaption>	
+						<pre><code contenteditable>
+.post .title {
+  font-size: 24px;
+}
+		
+
+
+		
+
+
+
+						</code></pre>
+						</figure>
+					</section>
+
+					<style>
+						.file{
+							width: 150px;
+						}
+
+						.package{
+							width: 150px;
+						}
+
+						.reveal .arrow{
+							font-size: 140px;
+							position: relative;
+							top: -70px;	
+							margin: 0 50px;
+							font-weight: bold;
+						}
+
+						.reveal .import-table{
+							vertical-align: middle;
+						}	
+
+						.reveal .import-table div{
+							display: inline-block;
+							height: 300px;
+							padding: 0 50px;
+						}
+
+
+						.reveal .import-table .file{
+							width: 200px;
+						}
+						.reveal .scss{
+							width: 100px;
+						}
+
+					</style>
+					<section>
+						<h1>Import</h1>
+						<div class="import-table">
+							<div>
+								<img src="img/notcss.svg" class="transparent scss" /><br />
+								<img src="img/notcss.svg" class="transparent scss" /><br />
+								<img src="img/notcss.svg" class="transparent scss" /><br />	
+							</div>
+							<div class="fragment">&rarr;</div>
+							<div class="fragment"><img src="img/package.svg" class="transparent scss" /></div>
+							<div class="fragment">&rarr;</div>
+							<div class="fragment"><img src="img/css.svg" class="transparent scss" /></div>		
+						</div>
+						
+						
+						
+						
+					</section>
 
 					<section>
 						<div class="content">

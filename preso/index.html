@@ -150,9 +150,6 @@
 						</div>	
 					</section>
 
-				</section>
-				<section>
-					
 					<section>
 						<div class="content">
 							<h1>CSS is not a programming language.</h1>
@@ -185,11 +182,6 @@
 				</section>	
 
 				<section>
-					<section class="question">
-						<div class="content">
-							<h1>CSS Best Practices</h1>
-						</div>	
-					</section>
 					<section class="question">
 						<div class="content">
 							<h1>CSS Resets</h1>
@@ -680,9 +672,86 @@ text-shadow: 2px 2px 4px #CCC;
 						</div>	
 					</section>		
 				</section>
+				<section>
+					<section class="question">
+						<div class="content">
+							<h1>Object Oriented CSS</h1>
+						</div>	
+					</section>
+					<section>
+						<h1>Object Oriented CSS</h1>
+						<div class="content">
+							<ul>
+								<li class="fragment">Remove Skin from Structure</li>
+								<li class="fragment">Remove Content from Container</li> 
+							</ul>	
+						</div>	
+					</section>
+					<section>
+						<h1>Skin from Structure</h1>
+						<figure class="code-half">
+						<figcaption>Pre OOCSS</figcaption>	
+						<pre><code contenteditable>
+.comment{
+	border: 1px solid #F00;
+	background: #DDD;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+
+.tweet{
+	border: 1px solid #F00;
+	background: #DDD;
+	font-family: Helvetica;
+	font-size: 20px;
+}							
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>OOCSS</figcaption>	
+						<pre><code contenteditable>
+.remark{
+	border: 1px solid #F00;
+	background: #DDD;
+	font-family: Helvetica;
+}
+.comment{
+	font-size: 16px;
+}
+
+.tweet{
+	font-size: 20px;
+}	
 
 
-				
+						</code></pre>
+						</figure>
+					</section>
+					<section>
+						<h1>Container from Content</h1>
+						<figure class="code-half">
+						<figcaption>Pre OOCSS</figcaption>	
+						<pre><code contenteditable>
+.footer h2{
+	font-size: 16px;
+	color: #FF0000;
+}
+
+						</code></pre>
+						</figure>
+						<figure  class="code-half fragment">
+						<figcaption>OOCSS</figcaption>	
+						<pre><code contenteditable>
+.secondary-header{
+	font-size: 16px;
+	color: #FF0000;
+}	
+
+
+						</code></pre>
+						</figure>
+					</section>
+				</section>
 
 				<section>
 					<section class="question">
@@ -1286,6 +1355,20 @@ $basesize: 20px;
 							</ul>
 						</div>	
 					</section>
+					<section class="question">
+						<div class="split-screen">
+							<img src="img/hipster.jpg" style="max-height: 600px;" />
+						</div>
+						<div class="split-screen">
+							<br /><br /><br /><br /><br />
+							<h3>I hate the Command Line!</h3>
+						</div>	
+					</section>
+					<section class="question">
+							<h1>Codekit on Mac</h1>
+							<img src="img/codekit.png" class="transparent" width="700" />
+					</section>
+
 
 				</section>
 
@@ -1294,6 +1377,27 @@ $basesize: 20px;
 
 
 				<section>
+					<section class="question">
+						<div class="content">
+							<h1>Conclusions</h1>
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Be consistent</h1>
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Have a reason</h1>
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Use a preprocessor</h1>
+						</div>	
+					</section>
+
 					<section>
 						<h1>Questions?</h1>
 						<div class="content-with-bg">
